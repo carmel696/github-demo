@@ -19,11 +19,11 @@ def encode(password):
     return encoded_password
 
 def decode(password):
-    encoded_password = ''
+    decoded_password = ''
     my_dict = {"1": "4", "2": "5", "3": "6", "4": "7", "5": "8", "6": "9", "7": "1", "8": "2", "9": "3"}
     for element in password:
-        encoded_password += my_dict[element]
-    return encoded_password
+        decoded_password += my_dict[element]
+    return decoded_password
 
 if __name__ == "__main__":
     option = 0
