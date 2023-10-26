@@ -1,3 +1,4 @@
+#Carmel Norris
 # test
 def print_menu():
     print('\nMenu')
@@ -6,18 +7,18 @@ def print_menu():
     print('2. Decode')
     print('3. Quit')
 
-def decode(password):
-    decoded_password = ''
+def encode(password):
+    encoded_password = ''
     for i in range(len(password)):
 
-        if int(password[i]) >= 3:
-            decoded_password += str(int(password[i]) - 3)
+        if int(password[i]) <= 7:
+            encoded_password += str(int(password[i]) + 3)
         else:
-            decoded_password += str(int(password[i]) + 7)
+            encoded_password += str(int(password[i]) - 7)
 
-    return decoded_password
+    return encoded_password
 
-def encode(password):
+def decode(password):
     pass
 
 if __name__ == "__main__":
@@ -32,5 +33,4 @@ if __name__ == "__main__":
             print('Your password has been encoded and stored!')
 
         elif option == 2:
-            password = input('Please enter your password to decode: ')
-            print(decode(password))
+            print(f'The encoded password is {password}, and the original password is {decode(password)}')
